@@ -13,7 +13,7 @@
 
 ### 完整书籍 PDF (推荐)
 
-**[📖 Agent 开发进阶指南-v2.6-完整版.pdf](pdf/Agent 开发进阶指南-v2.6-完整版.pdf)**
+**[📖 Agent 开发进阶指南-v2.6-完整版.pdf](Agent 开发进阶指南-v2.6-完整版.pdf)**
 
 - 文件大小：77 MB
 - 章节数：25 章
@@ -24,35 +24,33 @@
 
 ### 分章 PDF
 
-**[📁 下载全部章节](pdf/)**
-
 | 篇章 | 章节 | 下载 | 大小 |
 |------|------|------|------|
-| **基础篇** | 第 1 章 | [01-Agent 概念与架构模式.pdf](pdf/01-Agent 概念与架构模式.pdf) | 3.5 MB |
-| | 第 2 章 | [02-核心组件解析.pdf](pdf/02-核心组件解析.pdf) | 3.5 MB |
-| | 第 3 章 | [03-开发环境搭建.pdf](pdf/03-开发环境搭建.pdf) | 3.5 MB |
-| **框架篇** | 第 4 章 | [04-LangChain.pdf](pdf/04-LangChain.pdf) | 0.1 MB |
-| | 第 5 章 | [05-AutoGen.pdf](pdf/05-AutoGen.pdf) | 0.1 MB |
-| | 第 6 章 | [06-OpenClaw.pdf](pdf/06-OpenClaw.pdf) | 0.1 MB |
-| | 第 7 章 | [07-其他主流框架.pdf](pdf/07-其他主流框架.pdf) | 3.5 MB |
-| | 第 8 章 | [08-框架选型决策树.pdf](pdf/08-框架选型决策树.pdf) | 3.5 MB |
-| **场景篇** | 第 9 章 | [09-对话型 Agent 开发.pdf](pdf/09-对话型 Agent 开发.pdf) | 3.5 MB |
-| | 第 10 章 | [10-任务自动化 Agent.pdf](pdf/10-任务自动化 Agent.pdf) | 3.5 MB |
-| **RAG 篇** | 第 11 章 | [11-RAG 基础.pdf](pdf/11-RAG 基础.pdf) | 3.5 MB |
-| | 第 12 章 | [12-高级 RAG 技术.pdf](pdf/12-高级 RAG 技术.pdf) | 3.5 MB |
-| | 第 13 章 | [13-RAG 与记忆管理.pdf](pdf/13-RAG 与记忆管理.pdf) | 3.5 MB |
-| **进阶篇** | 第 14 章 | [14-多 Agent 协作系统.pdf](pdf/14-多 Agent 协作系统.pdf) | 3.5 MB |
-| | 第 15 章 | [15-性能优化与成本控制.pdf](pdf/15-性能优化与成本控制.pdf) | 3.5 MB |
-| | 第 16 章 | [16-安全与隐私.pdf](pdf/16-安全与隐私.pdf) | 3.5 MB |
-| | 第 17 章 | [17-测试与评估.pdf](pdf/17-测试与评估.pdf) | 3.5 MB |
-| | 第 18 章 | [18-漫剧剧本生成项目完整串讲.pdf](pdf/18-漫剧剧本生成项目完整串讲.pdf) | 3.5 MB |
-| **上下游知识** | 第 19 章 | [19-LLM 原理基础.pdf](pdf/19-LLM 原理基础.pdf) | 3.5 MB |
-| | 第 20 章 | [20-Prompt 工程与模板设计.pdf](pdf/20-Prompt 工程与模板设计.pdf) | 3.5 MB |
-| | 第 21 章 | [21-API 与成本模型.pdf](pdf/21-API 与成本模型.pdf) | 3.5 MB |
-| | 第 22 章 | [22-工具集成与 API 设计.pdf](pdf/22-工具集成与 API 设计.pdf) | 3.5 MB |
-| **工程实践篇** | 第 23 章 | [23-Agent Engineering 最佳实践.pdf](pdf/23-Agent Engineering 最佳实践.pdf) | 3.5 MB |
-| | 第 24 章 | [24-Harness Engineering 驾驭工程.pdf](pdf/24-Harness Engineering 驾驭工程.pdf) | 3.5 MB |
-| | 第 25 章 | [25-Vibe Coding 实践.pdf](pdf/25-Vibe Coding 实践.pdf) | 3.5 MB |
+| **基础篇** | 第 1 章 | [01-Agent 概念与架构模式.pdf](01-Agent 概念与架构模式.pdf) | 3.5 MB |
+| | 第 2 章 | [02-核心组件解析.pdf](02-核心组件解析.pdf) | 3.5 MB |
+| | 第 3 章 | [03-开发环境搭建.pdf](03-开发环境搭建.pdf) | 3.5 MB |
+| **框架篇** | 第 4 章 | [04-LangChain.pdf](04-LangChain.pdf) | 0.1 MB |
+| | 第 5 章 | [05-AutoGen.pdf](05-AutoGen.pdf) | 0.1 MB |
+| | 第 6 章 | [06-OpenClaw.pdf](06-OpenClaw.pdf) | 0.1 MB |
+| | 第 7 章 | [07-其他主流框架.pdf](07-其他主流框架.pdf) | 3.5 MB |
+| | 第 8 章 | [08-框架选型决策树.pdf](08-框架选型决策树.pdf) | 3.5 MB |
+| **场景篇** | 第 9 章 | [09-对话型 Agent 开发.pdf](09-对话型 Agent 开发.pdf) | 3.5 MB |
+| | 第 10 章 | [10-任务自动化 Agent.pdf](10-任务自动化 Agent.pdf) | 3.5 MB |
+| **RAG 篇** | 第 11 章 | [11-RAG 基础.pdf](11-RAG 基础.pdf) | 3.5 MB |
+| | 第 12 章 | [12-高级 RAG 技术.pdf](12-高级 RAG 技术.pdf) | 3.5 MB |
+| | 第 13 章 | [13-RAG 与记忆管理.pdf](13-RAG 与记忆管理.pdf) | 3.5 MB |
+| **进阶篇** | 第 14 章 | [14-多 Agent 协作系统.pdf](14-多 Agent 协作系统.pdf) | 3.5 MB |
+| | 第 15 章 | [15-性能优化与成本控制.pdf](15-性能优化与成本控制.pdf) | 3.5 MB |
+| | 第 16 章 | [16-安全与隐私.pdf](16-安全与隐私.pdf) | 3.5 MB |
+| | 第 17 章 | [17-测试与评估.pdf](17-测试与评估.pdf) | 3.5 MB |
+| | 第 18 章 | [18-漫剧剧本生成项目完整串讲.pdf](18-漫剧剧本生成项目完整串讲.pdf) | 3.5 MB |
+| **上下游知识** | 第 19 章 | [19-LLM 原理基础.pdf](19-LLM 原理基础.pdf) | 3.5 MB |
+| | 第 20 章 | [20-Prompt 工程与模板设计.pdf](20-Prompt 工程与模板设计.pdf) | 3.5 MB |
+| | 第 21 章 | [21-API 与成本模型.pdf](21-API 与成本模型.pdf) | 3.5 MB |
+| | 第 22 章 | [22-工具集成与 API 设计.pdf](22-工具集成与 API 设计.pdf) | 3.5 MB |
+| **工程实践篇** | 第 23 章 | [23-Agent Engineering 最佳实践.pdf](23-Agent Engineering 最佳实践.pdf) | 3.5 MB |
+| | 第 24 章 | [24-Harness Engineering 驾驭工程.pdf](24-Harness Engineering 驾驭工程.pdf) | 3.5 MB |
+| | 第 25 章 | [25-Vibe Coding 实践.pdf](25-Vibe Coding 实践.pdf) | 3.5 MB |
 
 ---
 
