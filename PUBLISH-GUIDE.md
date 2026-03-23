@@ -29,15 +29,16 @@
     └── 目标：book/agent-development-guide-book/v{版本号}/pdf/
     │
     ▼
-2. 创建打包下载文件
+2. 合并 PDF 为完整书籍
     │
-    └── v{版本号}/agent-guide-v{版本号}.zip
+    ├── 创建 v{版本号}/complete/ 目录
+    └── 合并所有分章 PDF 为完整书籍 PDF
     │
     ▼
 3. 更新 README.md
     │
     ├── 更新最新版本号
-    ├── 添加下载链接
+    ├── 添加下载链接 (分章 + 完整版)
     └── 更新版本历史
     │
     ▼
@@ -61,25 +62,26 @@
 agent-development-guide-book/
 ├── README.md                    # 本文件 (发布指南)
 ├── v2.6/                        # v2.6 版本
-│   ├── pdf/                     # PDF 文件 (25 章)
+│   ├── pdf/                     # 分章 PDF (25 章)
 │   │   ├── 01-Agent 概念与架构模式.pdf
 │   │   ├── 02-核心组件解析.pdf
 │   │   └── ...
-│   └── agent-guide-v2.6.zip     # 打包下载
+│   └── complete/                # 完整书籍 PDF
+│       └── Agent 开发进阶指南 -v2.6-完整版.pdf
 ├── v2.5/                        # v2.5 版本
 └── ...
 ```
 
 ### 2.2 文件命名
 
-**PDF 文件**:
+**分章 PDF**:
 ```
 {章节编号}-{中文章节名}.pdf
 ```
 
-**打包文件**:
+**完整书籍 PDF**:
 ```
-agent-guide-v{版本号}.zip
+Agent 开发进阶指南 -v{版本号}-完整版.pdf
 ```
 
 ---
@@ -127,11 +129,9 @@ cp "$SOURCE_DIR"/*.pdf "$TARGET_DIR/pdf/"
 pdf_count=$(ls -1 "$TARGET_DIR/pdf"/*.pdf 2>/dev/null | wc -l)
 echo "📊 复制了 $pdf_count 个 PDF 文件"
 
-# 创建打包文件
-echo "📦 创建打包文件..."
-cd "$TARGET_DIR"
-zip -r "agent-guide-$VERSION.zip" pdf/
-cd - > /dev/null
+# 合并 PDF 为完整书籍
+echo "📝 合并 PDF 为完整书籍..."
+./scripts/merge-pdfs.sh "$VERSION"
 
 # 更新 README.md
 echo "📝 更新 README.md..."
@@ -183,8 +183,8 @@ chmod +x scripts/release-pdf.sh
 **章节**: 25 章完整版
 
 **下载链接**:
-- [📥 打包下载](v2.6/agent-guide-v2.6.zip) (推荐)
-- [📄 单章下载](v2.6/) (选择需要的章节)
+- [📖 完整书籍 PDF](v2.6/complete/Agent 开发进阶指南 -v2.6-完整版.pdf) (推荐)
+- [📄 分章下载](v2.6/pdf/) (选择需要的章节)
 ```
 
 ### 4.3 更新版本历史
