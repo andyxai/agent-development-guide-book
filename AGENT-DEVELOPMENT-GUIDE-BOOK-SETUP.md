@@ -8,11 +8,11 @@
 
 ## 项目定位
 
-**对外发布书籍 PDF 版本的官方仓库**
+**对外发布书籍 Markdown 版本的官方仓库**
 
-- 只包含正式发布的 PDF 文件
+- 包含正式发布的 Markdown 文件（分章和完整版）
 - 按版本号组织 (v2.6/, v2.5/, ...)
-- 提供打包下载和单章下载
+- 提供完整阅读和分章阅读两种方式
 - README 指导用户阅读最新版本
 
 ---
@@ -22,14 +22,14 @@
 ```
 agent-development-guide-book/
 ├── README.md                    # 发布指南 (下载链接、阅读指南)
-├── PUBLISH-GUIDE.md             # 发布流程规范
+├── AGENT-DEVELOPMENT-GUIDE-BOOK-SETUP.md  # 本文件（项目设置记录）
+├── BOOK_WRITER-STATUS.md        # book_writer 项目状态
+├── Agent 开发进阶指南-v2.6.md   # v2.6 完整书籍 Markdown
 ├── v2.6/                        # v2.6 版本
-│   ├── pdf/                     # PDF 文件 (25 章)
-│   │   ├── 01-Agent 概念与架构模式.pdf
-│   │   ├── 02-核心组件解析.pdf
-│   │   └── ...
-│   └── agent-guide-v2.6.zip     # 打包下载
-├── v2.5/                        # v2.5 版本
+│   ├── 01-Agent 概念与架构模式.md
+│   ├── 02-核心组件解析.md
+│   └── ... (25 章)
+├── v2.5/                        # v2.5 版本（历史版本）
 └── ...
 ```
 
@@ -39,41 +39,41 @@ agent-development-guide-book/
 
 ### 触发条件
 
-**总编指令**: "可以对外发布了"
+**总编指令**: “可以对外发布了”
 
 ### 发布步骤
 
 ```
-总编确认"可以对外发布了"
+总编确认“可以对外发布了”
     │
     ▼
 1. 检查 agent-development-advanced-guide 项目
     │
-    └── docs/v{版本号}/pdf/ 目录已生成全部 PDF
+    └── docs/v{版本号}/md/ 目录已生成全部章节 Markdown
     │
     ▼
-2. 复制 PDF 文件
+2. 复制 Markdown 文件
     │
-    ├── 来源：book/agent-development-advanced-guide/docs/v{版本号}/pdf/
-    └── 目标：book/agent-development-guide-book/v{版本号}/pdf/
+    ├── 来源：book/agent-development-advanced-guide/docs/v{版本号}/md/
+    └── 目标：book/agent-development-guide-book/v{版本号}/
     │
     ▼
-3. 创建打包文件
+3. 生成完整书籍文件
     │
-    └── cd v{版本号} && zip -r agent-guide-v{版本号}.zip pdf/
+    └── 将 25 章合并为：Agent 开发进阶指南-v{版本号}.md
     │
     ▼
 4. 更新 README.md
     │
     ├── 更新最新版本号
-    ├── 添加下载链接
+    ├── 添加新版本目录链接
     └── 更新版本历史表格
     │
     ▼
 5. Git 提交并推送
     │
     ├── git add -A
-    ├── git commit -m "release: 发布 v{版本号} PDF 版本"
+    ├── git commit -m "release: 发布 v{版本号} Markdown 版本"
     └── git push origin main
     │
     ▼
@@ -82,28 +82,26 @@ agent-development-guide-book/
 
 ---
 
-## 已创建文件
+### 已创建文件
 
 ### README.md
 
 **内容**:
-- 下载最新版本 (v2.6)
-- 25 章 PDF 文件列表和下载链接
+- 阅读最新版本 (v2.6)
+- 25 章 Markdown 文件列表和链接
 - 推荐阅读顺序 (4 种学习路径)
 - 版本历史表格
-- PDF 文件说明
+- 完整书籍下载链接
 - 联系方式
 
-### PUBLISH-GUIDE.md
+### AGENT-DEVELOPMENT-GUIDE-BOOK-SETUP.md
 
 **内容**:
-- PDF 发布流程规范
+- 项目设置记录
 - 目录结构规范
-- 自动化脚本 (release-pdf.sh)
-- README 更新指南
-- Git 提交规范
-- 检查清单
-- 注意事项
+- 发布流程规范（Markdown 版本）
+- Git 设置指南
+- 与开发项目的关系说明
 
 ---
 
@@ -147,13 +145,13 @@ git push origin main
 
 ### 首次发布 (v2.6)
 
-- [ ] 等待总编确认"可以对外发布了"
-- [ ] 检查 agent-development-advanced-guide/docs/v2.6/pdf/ 有 25 个 PDF
-- [ ] 复制 PDF 到 agent-development-guide-book/v2.6/pdf/
-- [ ] 创建打包文件 v2.6/agent-guide-v2.6.zip
-- [ ] 更新 README.md (添加 v2.6 下载链接)
+- [x] 等待总编确认“可以对外发布了”
+- [x] 检查 agent-development-advanced-guide/docs/v2.6/md/ 有 25 个 Markdown 文件
+- [x] 复制 Markdown 到 agent-development-guide-book/v2.6/
+- [x] 生成完整书籍文件 Agent 开发进阶指南-v2.6.md
+- [x] 更新 README.md (添加 v2.6 链接)
 - [ ] Git 提交并推送
-- [ ] 验证 GitHub 仓库下载链接有效
+- [ ] 验证 GitHub 仓库链接有效
 
 ### 后续发布
 
@@ -167,8 +165,8 @@ git push origin main
 
 | 项目 | 用途 | 内容 |
 |------|------|------|
-| **agent-development-advanced-guide** | 开发仓库 | Markdown 草稿、审核报告、开发文档 |
-| **agent-development-guide-book** | 发布仓库 | 正式 PDF 版本、下载链接 |
+| **agent-development-advanced-guide** | 开发仓库 | Markdown 草稿、审核报告、开发文档、过程文件 |
+| **agent-development-guide-book** | 发布仓库 | 正式 Markdown 版本（分章 + 完整版） |
 
 **发布流程**:
 ```
@@ -177,7 +175,7 @@ agent-development-advanced-guide (开发)
     │ 总编确认发布
     │
     ▼
-生成 PDF (docs/v{版本号}/pdf/)
+生成正式 Markdown (docs/v{版本号}/md/)
     │
     │ 复制
     │
@@ -187,7 +185,7 @@ agent-development-guide-book (发布)
     │ 推送到 GitHub
     │
     ▼
-对外发布 (GitHub Releases)
+对外发布 (GitHub Repository)
 ```
 
 ---
@@ -198,15 +196,15 @@ agent-development-guide-book (发布)
 
 ✅ **必须**:
 - 总编确认后才能发布
-- PDF 文件与源文件一致
+- Markdown 文件与源文件一致
 - README 更新完整
 - Git 提交并推送
 
 ❌ **禁止**:
 - 未经总编确认就发布
-- 手动修改 PDF 文件
+- 手动修改 Markdown 文件内容
 - 跳过 README 更新
-- 只发布部分 PDF
+- 只发布部分章节
 
 ### GitHub 认证
 
@@ -239,16 +237,17 @@ git push https://<TOKEN>@github.com/andyxai/agent-development-guide-book.git mai
 
 - ✅ 项目已创建：book/agent-development-guide-book/
 - ✅ README.md 已创建 (发布指南)
-- ✅ PUBLISH-GUIDE.md 已创建 (发布规范)
-- ✅ Git 仓库已初始化
-- ⏳ 远程仓库待推送 (需要 GitHub 认证)
+- ✅ AGENT-DEVELOPMENT-GUIDE-BOOK-SETUP.md 已创建 (项目设置记录)
+- ✅ BOOK_WRITER-STATUS.md 已创建 (book_writer 状态)
+- ✅ v2.6 版本已整理 (25 章 + 完整版)
+- ⏳ Git 仓库待提交 (需要初始化)
 
 ### 下一步
 
-1. 配置 GitHub 认证 (SSH key 或 Token)
-2. 推送到远程仓库
-3. 等待总编发布指令
-4. 发布 v2.6 PDF 版本
+1. 初始化 Git 仓库
+2. 提交 v2.6 版本
+3. 推送到远程仓库
+4. 等待总编发布指令
 
 ---
 

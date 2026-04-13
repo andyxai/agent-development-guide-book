@@ -1,6 +1,6 @@
 # book_writer 项目状态
 
-**位置**: `/home/admin/openclaw/workspace/book/book_writer/`  
+**位置**: `/Users/andy.zx/qoder/book/book-writer/`  
 **状态**: ✅ 已初始化为 git 仓库  
 **远程仓库**: `git@github.com:andyxai/book-writer.git`
 
