@@ -2,7 +2,7 @@
 
 **版本**: v1.0  
 **作者**: 调研专家（可观测性方向）  
-**状态**: draft  
+**状态**: review  
 **最后更新**: 2026-04-13
 
 ---
@@ -34,7 +34,7 @@
 **OpenTelemetry 优势**：
 - 开放标准，零供应商锁定
 - 统一 traces/metrics/logs 数据模型
-- GenAI 语义规范（LLM Working Group 制定）
+- GenAI 语义规范（LLM Working Group 制定，目前处于 Development 阶段）
 - 支持多种后端（Jaeger、Prometheus、Grafana）
 
 ### 2. 核心概念

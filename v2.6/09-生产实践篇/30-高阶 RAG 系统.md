@@ -417,7 +417,7 @@ response = query_engine.query("你的问题")
 **效果提升**：
 - 召回率：+28%（混合检索 vs 单一 Vector）
 - 精确度：+22%（Cross-Encoder 重排）
-- 复杂问题：+45%（GraphRAG Global Search）
+- 复杂问题：72-83% 全面性胜率（GraphRAG Global Search vs Vector RAG）
 - 质量保障：每次迭代自动评估，阈值 < 0.7 阻止发布
 
 ---

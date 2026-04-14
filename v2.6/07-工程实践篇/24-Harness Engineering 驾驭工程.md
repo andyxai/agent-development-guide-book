@@ -2,9 +2,9 @@
 
 # 第 24 章：Harness Engineering (驾驭工程)
 
-> **本章目标**：深入解析 OpenAI 与 HashiCorp 联合提出的 AI 工程新范式——Harness Engineering。这是 2026 年 AI 规模化落地的核心方法论，解决 Agent 长期稳定运行、可审计、可维护的关键问题。
+> **本章目标**：深入解析 Harness Engineering——AI 工程化的新范式。这是 2026 年 AI 规模化落地的核心方法论，解决 Agent 长期稳定运行、可审计、可维护的关键问题。
 >
-> **核心来源**：OpenAI × HashiCorp 联合技术报告 (2025 Q4)、Anthropic Engineering Blog、Stripe Engineering Case Study
+> **核心来源**：Mitchell Hashimoto (HashiCorp 创始人) 博客文章 (2026-02)、OpenAI Engineering Blog、Anthropic Engineering Blog、Stripe Engineering Case Study
 
 ---
 
@@ -83,9 +83,7 @@
 >
 > **说明**: 展示上下文工程/架构约束/熵管理三大支柱如何协同支撑 Harness Engineering 核心目标，并通过反馈循环持续改进。
 >
-> **来源**: OpenAI × HashiCorp 联合技术报告 (2025 Q4)
->
-> **注意**: 此图需要总编确认是否符合报告原意
+> **来源**: 基于 Mitchell Hashimoto 博客文章 + OpenAI Engineering Blog 整理
 
 ```mermaid
 %%{init: {'theme': 'neutral'}}%%
