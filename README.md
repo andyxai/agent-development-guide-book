@@ -39,9 +39,9 @@
 | 概念 | 提出年份 | 核心定义 | 章节位置 |
 |------|---------|---------|---------|
 | **[Harness Engineering](NEW-CONCEPTS.md#一工程范式类)** (驾驭工程) | 2025 Q4 | Mitchell Hashimoto (HashiCorp 创始人) 提出，OpenAI 后续独立实践推广 | 第 24 章 |
-- **[Spec-Driven Development](NEW-CONCEPTS.md#一工程范式类)** (规范驱动开发) | 2025 Q4 | 规范作为真相来源，AI 从规范生成代码 | 第 06-04 章 |
-- **[Vibe Coding](NEW-CONCEPTS.md#一工程范式类)** (意图编程) | 2025 Q3 | Andrej Karpathy 推广，用自然语言描述意图，AI 负责实现 | 第 06-03 章 |
-- **[Agent Engineering](NEW-CONCEPTS.md#一工程范式类)** (Agent 工程) | 2024 Q4 | Anthropic 提出，构建高效、可靠、可扩展的 Agent 系统 | 第 06-01 章 |
+| **[Spec-Driven Development](NEW-CONCEPTS.md#一工程范式类)** (规范驱动开发) | 2025 Q4 | 规范作为真相来源，AI 从规范生成代码 | 第 06-04 章 |
+| **[Vibe Coding](NEW-CONCEPTS.md#一工程范式类)** (意图编程) | 2025 Q3 | Andrej Karpathy 推广，用自然语言描述意图，AI 负责实现 | 第 06-03 章 |
+| **[Agent Engineering](NEW-CONCEPTS.md#一工程范式类)** (Agent 工程) | 2024 Q4 | Anthropic 提出，构建高效、可靠、可扩展的 Agent 系统 | 第 06-01 章 |
 | **[MCP](NEW-CONCEPTS.md#二架构与协议类)** (Model Context Protocol) | 2024 Q4 | Anthropic 提出，标准化模型与外部系统交互的协议 | 第 22.1 节 |
 | **[Graph RAG](NEW-CONCEPTS.md#五评估与优化类)** | 2024 Q2 | Microsoft 提出，知识图谱增强检索 | 第 12.1 节 |
 | **[MoE](NEW-CONCEPTS.md#四模型与技术类)** (Mixture of Experts) | 2023-2024 | 稀疏专家模型，激活参数远小于总参数 | 第 20.1 节 |
