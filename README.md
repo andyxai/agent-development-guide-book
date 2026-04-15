@@ -26,8 +26,8 @@
 - **[📏 写作规则](dev/guides/)** - 写作指南、格式规范、发布规则
 - **[📊 写作状态](dev/BOOK_WRITER-STATUS.md)** - book_writer项目状态
 
-### 知识库 (knowledge-base/)
-- **[📚 知识库索引](knowledge-base/README.md)** - Agent开发知识来源
+### 知识库 (docs/knowledge-base/)
+- **[📚 知识库索引](docs/knowledge-base/README.md)** - Agent开发知识来源
 - 按主题分类：rag、multi-agent、llm、prompt-engineering等
 
 ---
