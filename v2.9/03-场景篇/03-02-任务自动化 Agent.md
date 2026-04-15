@@ -63,15 +63,45 @@
 
 复杂任务无法一步完成，需要分解为可执行的原子步骤。
 
+```mermaid
+graph TD
+    Task[复杂任务] --> Decompose{任务分解}
+    
+    Decompose --> P1[原子性<br/>不可再分]
+    Decompose --> P2[独立性<br/>可独立执行]
+    Decompose --> P3[可验证<br/>明确完成标准]
+    
+    P1 --> Analyze{分析依赖}
+    P2 --> Analyze
+    P3 --> Analyze
+    
+    Analyze -->|先后依赖| Serial[串行编排
+    A→B→C]
+    Analyze -->|无依赖| Parallel[并行编排
+    A,B,C同时]
+    Analyze -->|条件判断| Condition[条件分支
+    if-else]
+    Analyze -->|重复执行| Loop[循环编排
+    for/while]
+    
+    Serial --> Execute[执行任务]
+    Parallel --> Execute
+    Condition --> Execute
+    Loop --> Execute
+    
+    Execute --> Monitor{监控状态}
+    Monitor -->|成功| Result[返回结果]
+    Monitor -->|失败| Retry[重试机制]
+    Retry -->|超过重试次数| Fallback[降级处理]
+    Retry -->|未超过| Execute
+    Fallback --> Alert[告警通知]
+    
+    style Task fill:#e3f2fd
+    style Result fill:#c8e6c9
+    style Alert fill:#ffebee
 ```
-问题根源：复杂任务无法一步完成
-    │
-    ├── 分解原则：每个子任务有明确输入输出、可独立执行、可验证结果
-    │
-    ├── 依赖关系：子任务之间可能有先后依赖（A 完成才能执行 B）或并行关系
-    │
-    └── 动态调整：执行中可能需要根据中间结果调整后续任务（条件分支）
-```
+
+**图 10-1**: 任务自动化Agent核心流程。从任务分解到编排策略，再到执行监控和异常处理。
 
 **分解原则**：
 1. **原子性**：每个子任务不可再分，有明确的完成标准
