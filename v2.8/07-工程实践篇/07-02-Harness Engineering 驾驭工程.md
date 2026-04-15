@@ -1758,9 +1758,9 @@ class AIConstraintOptimizer:
 
 ---
 
-## 24.8 OpenHarness 源码实战解读
+## 24.8 假设性案例分析：Harness 框架设计
 
-> **本节说明**：基于 OpenHarness 开源项目源码，深度解读 Harness Engineering 的实战实现。建议对照源码学习：https://github.com/OpenHarness/openharness
+> **⚠️ 重要说明**：本节为**假设性架构设计**，用于演示 Harness Engineering 的实现思路。代码和架构均为教学示例，非真实项目。真实项目可参考 LangGraph（https://github.com/langchain-ai/langgraph）、AutoGen、CrewAI 等开源框架。
 
 ### 24.8.1 Harness 的本质：代码映射
 

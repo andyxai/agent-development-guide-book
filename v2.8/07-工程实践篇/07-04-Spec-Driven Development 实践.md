@@ -45,7 +45,7 @@
 
 ### 3. 三种规范严格度级别
 
-根据 2026 年 2 月 arXiv 论文《Spec-Driven Development: From Code to Contract in the Age of AI Coding Assistants》：
+根据行业实践总结（参考 ThoughtWorks、Amazon Kiro、GitHub Spec Kit 等官方文档）：
 
 | 级别 | 名称 | 定义 | 适用场景 |
 |------|------|------|---------|
@@ -248,7 +248,12 @@ GitHub 分析 2500+ agent 配置文件，最有效 spec 覆盖以下区域：
 **架构优势**：
 - 主 agent 负责编排，子 agent 获得新鲜上下文窗口
 - 任务系统解决"Agent Amnesia"和"Context Pollution"问题
-- 支持 Ralph 架构（无状态循环：`while :; do cat PROMPT.md | claude-code ; done`）
+- 支持 Ralph 架构模式（**社区实践**，非官方功能）：
+  ```bash
+  # 无状态循环模式：每次从 PROMPT.md 读取任务，保持上下文清洁
+  while :; do cat PROMPT.md | claude-code ; done
+  ```
+  **⚠️ 警告**：此为社区爱好者探索的用法，非 Anthropic 官方支持。生产环境需谨慎使用，建议参考官方文档的最佳实践。
 
 **总**：工具选择次要，结构化思维优于工具选择。个人项目用 OpenSpec/Cursor，团队协作用 Spec Kit/Kiro，复杂架构用 Intent。
 
@@ -442,12 +447,12 @@ Specify（规范） → Plan（计划） → Tasks（任务分解） → Impleme
 ---
 
 **知识来源**:
-- [GitHub Spec Kit 官方仓库](https://github.com/github/spec-kit) ⭐ 75k+
-- [arXiv: Spec-Driven Development: From Code to Contract in the Age of AI Coding Assistants](https://arxiv.org/abs/2602.00180)
+- [GitHub Spec Kit 官方仓库](https://github.com/github/spec-kit)（Star 数持续变化，请以 GitHub 实时数据为准）
 - [ThoughtWorks - Spec-driven development: Unpacking one of 2025's key new AI-assisted engineering practices](https://www.thoughtworks.com/en-cn/insights/blog/agile-engineering-practices/spec-driven-development-unpacking-2025-new-engineering-practices)
 - [Addy Osmani - How to write a good spec for AI agents](https://addyosmani.com/blog/good-spec/)
 - [Amazon Kiro Docs - Specs](https://kiro.dev/docs/specs/)
 - [Intent-Driven.dev - Best Practices for Spec-Driven Development](https://intent-driven.dev/knowledge/best-practices/)
+- [Claude Code 官方文档](https://docs.anthropic.com/en/docs/claude-code/overview)
 
 ---
 
