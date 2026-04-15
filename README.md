@@ -22,11 +22,13 @@
 - **[📊 修改日志](CATALOG.md#-版本历史)** - 版本历史与更新记录
 - **[🔍 新概念清单](NEW-CONCEPTS.md)** - 2024-2026 新概念 (35 个)
 
-### 写作规范 (book_writer/)
-- **[📖 Book Writer 指南](../book_writer/BOOK_WRITER_GUIDE.md)** - 通用写书经验指南
-- **[📏 写作规则](../book_writer/rules/)** - 深度要求/排版规范/Git 提交等
-- **[🛠️ 写作技能](../book_writer/skills/)** - 大纲/细纲/正文编写等
-- **[📝 模板文件](../book_writer/templates/)** - 章节/审查/Git 提交模板
+### 写作规范 (dev/)
+- **[📏 写作规则](dev/guides/)** - 写作指南、格式规范、发布规则
+- **[📊 写作状态](dev/BOOK_WRITER-STATUS.md)** - book_writer项目状态
+
+### 知识库 (docs/knowledge-base/)
+- **[📚 知识库索引](docs/knowledge-base/README.md)** - Agent开发知识来源
+- 按主题分类：rag、multi-agent、llm、prompt-engineering等
 
 ---
 
@@ -77,27 +79,27 @@ agent-development-advanced-guide/
 ├── CATALOG.md                   # 全书目录（9篇33章跳转链接+版本历史）
 ├── NEW-CONCEPTS.md              # 2024-2026 新概念清单（35 个概念）
 ├── docs/                        # 正式文档发布目录
-│   └── v2.9/                    # v2.9 版本文档（9篇33章）
-│       ├── 01-基础篇/
-│       ├── 02-框架篇/
-│       ├── 03-场景篇/
-│       ├── 04-RAG篇/
-│       ├── 05-上下游知识/
-│       ├── 06-工程实践篇/
-│       ├── 07-数据与后训练篇/
-│       ├── 08-生产实践篇/
-│       └── 09-综合案例篇/
+│   ├── v2.9/                    # v2.9 版本文档（9篇33章）
+│   │   ├── 01-基础篇/
+│   │   ├── 02-框架篇/
+│   │   ├── 03-场景篇/
+│   │   ├── 04-RAG篇/
+│   │   ├── 05-上下游知识/
+│   │   ├── 06-工程实践篇/
+│   │   ├── 07-数据与后训练篇/
+│   │   ├── 08-生产实践篇/
+│   │   └── 09-综合案例篇/
+│   └── knowledge-base/          # 知识库（网络文章收集）
+│       ├── rag/
+│       ├── multi-agent/
+│       ├── llm/
+│       └── ...
 ├── dev/                         # 开发中（过程文件）
 │   ├── drafts/                  # 正文草稿
 │   ├── guides/                  # 写作指南
 │   ├── reviews/                 # 审查报告
-│   └── research/                # 调研报告
-│
-└── book_writer/                 # 书籍创作能力库（通用规范）
-    ├── BOOK_WRITER_GUIDE.md     # 通用写书经验指南
-    ├── rules/                   # 规则类文档
-    ├── skills/                  # 技能类文档
-    └── templates/               # 模板类文档
+│   ├── research/                # 调研报告
+│   └── references/              # 参考资料
 ```
 
 ---
@@ -253,22 +255,19 @@ agent-development-advanced-guide/
 | **[CATALOG.md](CATALOG.md)** | **全书目录+版本历史（9篇33章）** |
 | **[NEW-CONCEPTS.md](NEW-CONCEPTS.md)** | **2024-2026 新概念清单（35 个概念）** |
 
-### 写作指南（book_writer/）
+### 写作指南（dev/）
 | 文档 | 用途 |
 |------|------|
-| [BOOK_WRITER_GUIDE.md](../book_writer/BOOK_WRITER_GUIDE.md) | 通用写书经验指南 |
-| [rules/](../book_writer/rules/) | 写作规则（7 个） |
-| [skills/](../book_writer/skills/) | 写作技能（7 个） |
-| [templates/](../book_writer/templates/) | 模板文件（3 个） |
+| [dev/guides/](dev/guides/) | 写作指南（8个） |
+| [dev/references/](dev/references/) | 参考资料 |
+| [dev/BOOK_WRITER-STATUS.md](dev/BOOK_WRITER-STATUS.md) | book_writer状态 |
 
-### 开发文件（dev/）
-| 目录 | 用途 |
+### 知识库（docs/knowledge-base/）
+| 文档 | 用途 |
 |------|------|
-| `dev/drafts/` | 正文草稿（34 章） |
-| `dev/guides/` | 写作指南（6 个） |
-| `dev/research/` | 调研报告（5 份） |
-| `dev/temp/` | 临时文件（30+ 个） |
-| `dev/reviews/` | 审查报告（60+ 份） |
+| [docs/knowledge-base/](docs/knowledge-base/) | Agent开发知识来源 |
+| [engineering/](docs/knowledge-base/engineering/) | 工程实践文章 |
+| [multi-agent/](docs/knowledge-base/multi-agent/) | 多Agent协作文章 |
 
 ---
 
@@ -282,7 +281,7 @@ agent-development-advanced-guide/
 1. **[README.md](README.md)** - 项目总索引
 2. **[dev/drafts/](dev/drafts/)** - 正文草稿
 3. **[dev/guides/](dev/guides/)** - 写作指南
-4. **[book_writer/](../book_writer/)** - 通用规范
+4. **[docs/knowledge-base/](docs/knowledge-base/)** - 知识库
 
 ### Git 使用
 
