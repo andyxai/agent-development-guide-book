@@ -1,10 +1,10 @@
 **版本**: v2.6 (2026-03-23 全书完成)
 
-## 24.8 Vibe Coding 实践
+## 25.1 Vibe Coding 实践
 
-> **本节目标**：深入解析 2025 Q3 兴起的新编程范式——Vibe Coding。这是 AI Native 时代人类与 AI 协作编写代码的革命性方法，代表从"语法驱动"到"意图驱动"的根本性转变。
+> **本节目标**：深入解析 2025年2月兴起的新编程范式——Vibe Coding。这是 AI Native 时代人类与 AI 协作编写代码的革命性方法，代表从“语法驱动”到“意图驱动”的根本性转变。
 >
-> **核心来源**：Andrej Karpathy 技术演讲 (2025 Q3)、OpenAI 内部工程实践、GitHub Copilot Workspace 技术报告、Cursor 用户研究
+> **核心来源**：Andrej Karpathy 技术演讲 (2025年2月)、OpenAI 内部工程实践、GitHub Copilot Workspace 技术报告、Cursor 用户研究
 
 ---
 

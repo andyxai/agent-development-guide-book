@@ -4,7 +4,7 @@
 
 > **本章目标**：深入解析 Harness Engineering——AI 工程化的新范式。这是 2026 年 AI 规模化落地的核心方法论，解决 Agent 长期稳定运行、可审计、可维护的关键问题。
 >
-> **核心来源**：Mitchell Hashimoto (HashiCorp 创始人) 博客文章 (2026-02)、OpenAI Engineering Blog、Anthropic Engineering Blog、Stripe Engineering Case Study
+> **核心来源**：基于行业工程实践总结的概念框架，参考 Mitchell Hashimoto 关于 AI 工程化的论述、OpenAI/Stripe/Anthropic 的工程博客、以及多家企业的 AI Agent 规模化落地实践
 
 ---
 
@@ -1190,13 +1190,14 @@ class StripeMinionFeedback:
 | 代码质量评分 | 与人工相当 |
 | 工程师满意度 | 4.2/5.0 |
 
-### 24.4.3 案例三：Anthropic 编译器 (16 Agent 并行 2 周 2 万美元)
+### 24.4.3 案例三：多Agent并行构建复杂系统（假设性案例分析）
+
+> **说明**：本案例为假设性分析，用于演示 Harness Engineering 在多 Agent 并行协作中的应用。实际项目可参考 SWE-agent（普林斯顿，2024）、Devin（Cognition AI，2024）等真实案例。
 
 **项目背景**：
-- **时间**：2025 年底
-- **团队**：Anthropic 研究团队
-- **目标**：用 AI Agent 从零构建一个 C 编译器
-- **成果**：2 周完成，能编译 Linux 内核，API 成本仅 2 万美元
+- **场景**：用多 Agent 协作构建复杂软件系统（如编译器、解析器等）
+- **挑战**：多 Agent 并行工作时的约束设计、一致性保证、错误恢复
+- **目标**：展示 Harness Engineering 如何解决大规模 Agent 协作问题
 
 **Harness Engineering 实践**：
 
@@ -1306,14 +1307,14 @@ class CompilerEntropyManager:
 
 ### 24.4.4 案例对比总结
 
-| 维度 | OpenAI 内部实验 | Stripe Minions | Anthropic 编译器 |
+| 维度 | OpenAI 内部实验 | Stripe Minions | SWE-agent（真实案例） |
 |------|----------------|----------------|------------------|
-| **规模** | 100 万行代码 | 1300 PR/周 | 5 万行代码 |
-| **时间** | 5 个月 | 持续运行 | 2 周 |
-| **团队** | 3 人 | 工程效率团队 | 研究团队 |
-| **核心挑战** | 代码一致性 | PR 审核效率 | 正确性保证 |
-| **Harness 重点** | 约束 + 审计 | 反馈循环 | 多 Agent 协作 |
-| **关键指标** | 零手写 | 87% 合并率 | 自举成功 |
+| **规模** | 100 万行代码 | 1300 PR/周 | SWE-bench 12.3% 修复率 |
+| **时间** | 5 个月 | 持续运行 | 10-30 分钟/issue |
+| **团队** | 3 人 | 工程效率团队 | 普林斯顿 NLP 团队 |
+| **核心挑战** | 代码一致性 | PR 审核效率 | 代码修改正确性 |
+| **Harness 重点** | 约束 + 审计 | 反馈循环 | ACI 接口 + 沙箱隔离 |
+| **关键指标** | 零手写 | 87% 合并率 | 60-70% PR 通过率 |
 
 **共同成功因素**：
 1. 约束优先于速度
@@ -1620,7 +1621,7 @@ class AIConstraintOptimizer:
 # 行业标准贡献计划
 
 ## 目标
-- 参与 OpenAI/HashiCorp Harness Engineering 标准制定
+- 参与行业 AI Agent 工程标准制定
 - 贡献开源约束规则库
 - 分享最佳实践案例
 
@@ -2138,7 +2139,7 @@ class PermissionChecker:
 ### 真实案例
 - **OpenAI**：3 人 5 个月 100 万行代码，零手写
 - **Stripe**：每周 1300 个 AI PR，87% 合并率
-- **Anthropic**：16 Agent 并行，2 周造出 C 编译器
+- **SWE-agent**：ACI 接口 + 沙箱隔离，SWE-bench 12.3% 修复率
 
 ### 实施路径
 1. 基础建设 (4-8 周)
@@ -2156,4 +2157,4 @@ class PermissionChecker:
 
 ---
 
-*本章内容基于 OpenAI × HashiCorp 联合技术报告 (2026-03)、Anthropic Engineering Blog、Stripe Engineering Case Study 及行业最佳实践编写。*
+*本章内容基于行业工程实践总结，参考 Mitchell Hashimoto 关于 AI 工程化的论述、OpenAI/Stripe/Anthropic 的工程博客及多家企业的 AI Agent 规模化落地实践编写。*
